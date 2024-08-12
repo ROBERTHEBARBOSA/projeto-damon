@@ -1,0 +1,127 @@
+body {
+    font-family: "Poppins", sans-serif;
+    max-width: 1280px;
+    margin: 0 auto;
+  }
+  
+  .carrossel {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: -1;
+  }
+  
+  .informacoes {
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Transição suave */
+  }
+  
+  .informacoes.ativa {
+    display: block;
+    opacity: 1;
+  }
+  
+  .conteudo {
+    display: flex; 
+    flex-direction: column;
+    justify-content: space-evenly;
+    min-height: 100vh;
+    position: relative;
+    z-index: 1; /* Certifica-se de que o conteúdo esteja acima da carrossel */
+  }
+  
+  .informacoes h1 {
+    font-size: 35px;
+    color: #ffffff;
+    margin-bottom: 100px;
+    font-family: "GOT";
+    letter-spacing: 8px;
+  }
+  
+  @font-face {
+    font-family: "GOT";
+    src: url(../fontes/GOT.ttf);
+  }
+  
+  .informacoes .descricao {
+    width: 35%;
+    font-size: 20px;
+    color: #ffffff;
+    line-height: 40px;
+    overflow: auto;
+  }
+  
+  .botoes-carrossel {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    position: relative;
+    z-index: 2; /* Garante que os botões estejam acima das imagens */
+  }
+  
+  .botoes-carrossel .botao {
+    background-color: #ffffff;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    border: 1px solid transparent;
+    cursor: pointer;
+    background-color: #510101c9;
+  }
+  
+  .botoes-carrossel .botao.selecionado {
+    background-color: #320101;
+  }
+  
+  .imagem {
+    width: 100vw;
+    height: 100vh;
+    object-fit: cover;
+    display: none;
+    opacity: 0;
+    transition: opacity 0.5s ease-in-out; /* Transição suave */
+  }
+  
+  .imagem.ativa {
+    display: block;
+    opacity: 1;
+    animation: mudarImagem 0.7s;
+  }
+  
+  @keyframes mudarImagem {
+    from {
+      opacity: 0.85;
+    }
+    to {
+      opacity: 1;
+    }
+  }
+  
+  .divbtn {
+    display: flex;
+    height: 40rem;
+    width: 80rem;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    border: none; /* Removido para evitar qualquer interferência */
+    position: relative;
+    z-index: 2; /* Certifica-se de que o botão esteja acima das imagens */
+  }
+  
+  .btn {
+    padding: 20px;
+    background-color: #640202a7;
+    border-radius: 20px;
+
+  }
+  
+  .btn a {
+    text-decoration: none;
+    color: rgb(0, 0, 0);
+    font-size: 23px;
+ 
+  }
+  
